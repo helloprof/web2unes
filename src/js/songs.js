@@ -14,6 +14,7 @@ window.songs = [
     explicit: true,
     albumName: "Scarlet",
     duration: "3:51",
+    year: 2023
   },
   {
     songID: 2, // primary key
@@ -24,6 +25,7 @@ window.songs = [
     explicit: true,
     albumName: "Scarlet",
     duration: "4:08",
+    year: 2023
   },
   {
     songID: 3, // primary key
@@ -34,6 +36,7 @@ window.songs = [
     explicit: true,
     albumName: "Scarlet",
     duration: "3:56",
+    year: 2023
   },
   {
     songID: 4, // primary key
@@ -44,6 +47,7 @@ window.songs = [
     explicit: true,
     albumName: "For All The Dogs",
     duration: "4:18",
+    year: 2023
   },
   {
     songID: 5, // primary key
@@ -55,5 +59,6 @@ window.songs = [
     explicit: true,
     albumName: "For All The Dogs",
     duration: "4:18",
+    year: 2023
   },
 ];
