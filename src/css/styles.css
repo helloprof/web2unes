@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: #121212;
+    margin: 20px;
+    padding: 20px;
+    font-size: 40px;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+    border: solid blue thin;
+}
+
+.sidebar {
+    width: 20%;
+    border: solid blue thin;
+
+}
+
+.mainContent {
+    width: 80%;
+    border: solid blue thin;
+
+}
+
+#artists {
+    width: 100%;
+}
+
+button {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: 1px solid grey;
+    border-radius: 12px;
+    padding: 10px;
+    /* border: none;  */
+}
+button:hover {
+    background-color: black;
+    color: white;
+}
+#artists button:hover {
+    background-color: green;
+    color: black;
+    border-radius: 100px;
+    box-shadow: 10px 5px 5px green;}
+
+.red {
+    background-color: red;
+}
