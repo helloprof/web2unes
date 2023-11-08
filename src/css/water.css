@@ -1634,3 +1634,24 @@ body > footer {
     text-decoration: underline;
   }
 }
+
+#menu {
+  display: flex;
+  justify-content: space-around;
+  border: solid blue thin;
+
+}
+
+.sidebar {
+  width: 20%;
+  border: solid blue thin;
+
+}
+.mainContent {
+  width: 80%;
+  border: solid blue thin;
+
+}
+#artists {
+  width: 100%;
+}

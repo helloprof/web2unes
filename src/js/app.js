@@ -68,7 +68,7 @@ function listSongs(artistID) {
 function listArtists(artists) {
     console.log("listing artists")
     // buttons 
-    const menu = document.getElementById("menu")
+    const menu = document.getElementById("artists")
     const buttonMenu = document.createElement("div")
     buttonMenu.className = "buttonMenu"
     menu.appendChild(buttonMenu)
