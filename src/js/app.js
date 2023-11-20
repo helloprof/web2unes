@@ -20,14 +20,14 @@ const { artists, songs } = window;
 // For debugging, display all of our data in the console. You can remove this later.
 console.log({ artists, songs }, "App Data");
 
-const tableHeaders = ["Song", "Year", "Length"]
-tableHeaders.forEach((header) => {
-    const thead = document.getElementById("header")
-    const th = document.createElement("th")
-    th.textContent = header
-    // console.log(header)
-    thead.appendChild(th)
-})
+// const tableHeaders = ["Song", "Year", "Length"]
+// tableHeaders.forEach((header) => {
+//     const thead = document.getElementById("header")
+//     const th = document.createElement("th")
+//     th.textContent = header
+//     // console.log(header)
+//     thead.appendChild(th)
+// })
 
 function listSongs(artistID) {
     const grid = document.getElementById("grid")
@@ -37,31 +37,61 @@ function listSongs(artistID) {
     console.log(songsByArtist)
 
     songsByArtist.forEach((song) => {
-        const tr = document.createElement("tr")
-        const tbody = document.getElementById("songs")
-        tbody.appendChild(tr)
+        // const tr = document.createElement("tr")
+        // const tbody = document.getElementById("songs")
+        // tbody.appendChild(tr)
 
-        const tdSong = document.createElement("td")
-        const tdYear = document.createElement("td")
-        const tdLength = document.createElement("td")
+        // const tdSong = document.createElement("td")
+        // const tdYear = document.createElement("td")
+        // const tdLength = document.createElement("td")
 
-        tdSong.textContent = song.title
-        tdYear.textContent = song.year
-        tdLength.textContent = song.duration
+        // tdSong.textContent = song.title
+        // tdYear.textContent = song.year
+        // tdLength.textContent = song.duration
 
-        tr.appendChild(tdSong)
-        tr.appendChild(tdYear)
-        tr.appendChild(tdLength)
+        // tr.appendChild(tdSong)
+        // tr.appendChild(tdYear)
+        // tr.appendChild(tdLength)
 
-        tr.addEventListener("click", () => {
-            console.log(song.title)
-        })
+        // tr.addEventListener("click", () => {
+        //     console.log(song.title)
+        // })
+
+        const songCard = document.createElement("div")
+        songCard.className = "card"
+
+        const image = document.createElement("img")
+        const cardHeader = document.createElement("div")
+        const title = document.createElement("h5")
+        const description = document.createElement("h6")
+
+
+        image.src = song.albumCover
+        title.textContent = song.title
+        description.textContent = song.albumName
+
+
+        cardHeader.appendChild(title)
+        cardHeader.appendChild(description)
+
+        songCard.appendChild(image)
+        songCard.appendChild(cardHeader)
+
+
+        const cardContainer = document.querySelector(".cardContainer")
+        cardContainer.appendChild(songCard)
+
+    //     <div class="card">
+    //     <img src="images/album1.jpeg" alt="Avatar" class="cardImage">
+    //     <div class="container">
+    //         <h4><b>John Doe</b></h4>
+    //         <p>Architect & Engineer</p>
+    //     </div>
+    // </div>
 
 
 
-        // tr.textContent = artistID
-        // grid.appendChild(table)
-        // table.appendChild(tr)
+        
     })
 }
 
@@ -79,6 +109,9 @@ function listArtists(artists) {
     grid.id = "grid"
     menu.appendChild(grid)
 
+    const table = document.querySelector("table")
+    table.remove()
+
     artists.forEach((artist) => {
         const artistButton = document.createElement("button")
         artistButton.className = "button"
@@ -88,12 +121,28 @@ function listArtists(artists) {
         artistButton.addEventListener("click", (e) => {
             const title = document.getElementById("selected-artist")
             title.textContent = artist.name
-            const tbody = document.getElementById("songs")
-            tbody.remove()
-            const tbodyReset = document.createElement("tbody")
-            tbodyReset.id = "songs"
-            const table = document.querySelector("table")
-            table.appendChild(tbodyReset)
+
+            // const tbody = document.getElementById("songs")
+            // tbody.remove()
+            // const tbodyReset = document.createElement("tbody")
+            // tbodyReset.id = "songs"
+            // const table = document.querySelector("table")
+            // table.appendChild(tbodyReset)
+
+            // const mainContent = document.querySelector(".mainContent")
+            // mainContent.remove()
+
+            // const tbodyReset = document.createElement("div")
+            // tbodyReset.className = "mainContent"
+            // const menu = document.querySelector("menu")
+            // menu.appendChild(tbodyReset)
+
+            const mainContent = document.querySelector(".mainContent")
+            // const cardTemp = document.querySelector(".cardContainer")
+            // cardTemp.remove()
+            const cardContainer = document.createElement("div")
+            cardContainer.className = "cardContainer"
+            mainContent.appendChild(cardContainer)
             listSongs(artist.artistID)
         })
     })
