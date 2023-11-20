@@ -14,19 +14,21 @@ nav {
     margin: 20px;
     padding: 20px;
     font-size: 40px;
+    width: 20%;
 }
 
 #menu {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     border: solid blue thin;
+    width: 80%;
 }
 
-.sidebar {
+/* .sidebar {
     width: 20%;
     border: solid blue thin;
 
-}
+} */
 
 .mainContent {
     width: 80%;
@@ -34,9 +36,6 @@ nav {
 
 }
 
-#artists {
-    width: 100%;
-}
 
 button {
     background-color: white;
@@ -59,4 +58,17 @@ button:hover {
 
 .red {
     background-color: red;
+}
+
+.card {
+    border: solid white thin;
+    flex-basis: 33%;
+}
+
+.cardContainer {
+    display: flex;
+}
+
+.cardImage {
+    width: 100%;
 }
