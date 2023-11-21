@@ -78,7 +78,7 @@ function listSongs(artistID) {
         songCard.appendChild(cardHeader)
 
 
-        const cardContainer = document.querySelector(".cardContainer")
+        const cardContainer = document.querySelector(".cardContainer")        
         cardContainer.appendChild(songCard)
 
     //     <div class="card">
@@ -140,6 +140,10 @@ function listArtists(artists) {
             const mainContent = document.querySelector(".mainContent")
             // const cardTemp = document.querySelector(".cardContainer")
             // cardTemp.remove()
+
+            // const cardContainerOriginal = document.querySelector(".cardContainer")
+            // cardContainerOriginal.remove()
+
             const cardContainer = document.createElement("div")
             cardContainer.className = "cardContainer"
             mainContent.appendChild(cardContainer)

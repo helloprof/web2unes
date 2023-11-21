@@ -61,14 +61,20 @@ button:hover {
 }
 
 .card {
+    display: flex;
     border: solid white thin;
-    flex-basis: 33%;
+    flex-direction: column;
+    width: 20%;
+    /* flex-basis: 33.33%; */
 }
 
 .cardContainer {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.cardImage {
+/* .cardImage {
     width: 100%;
-}
+} */
