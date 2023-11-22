@@ -3,7 +3,8 @@ body {
     color: white;
     font-family: 'Montserrat', sans-serif;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    height: 92vh;
 }
 
 nav {
@@ -11,16 +12,25 @@ nav {
     flex-direction: column;
     border-radius: 12px;
     background-color: #121212;
-    margin: 20px;
+    margin: 5px;
     padding: 20px;
     font-size: 40px;
     width: 20%;
 }
 
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+
+}
+
 #menu {
     display: flex;
+    flex-direction: column;
     /* justify-content: space-around; */
-    border: solid blue thin;
+    /* border: solid blue thin; */
     width: 80%;
 }
 
@@ -32,8 +42,14 @@ nav {
 
 .mainContent {
     width: 80%;
-    border: solid blue thin;
-
+    /* border: solid blue thin; */
+    overflow-y: auto;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #121212;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -51,10 +67,26 @@ button:hover {
     color: white;
 }
 #artists button:hover {
-    background-color: green;
+    /* background-color: green; */
     color: black;
-    border-radius: 100px;
-    box-shadow: 10px 5px 5px green;}
+    /* border-radius: 50%; */
+    /* box-shadow: 10px 5px 5px green; */
+
+}
+
+.artist-button {
+    border-radius: 50%;
+}
+
+
+
+#artists {
+    margin: 5px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #121212;
+    width: 100%;
+}
 
 .red {
     background-color: red;
@@ -62,10 +94,21 @@ button:hover {
 
 .card {
     display: flex;
-    border: solid white thin;
+    /* border: solid white thin; */
     flex-direction: column;
     width: 20%;
     /* flex-basis: 33.33%; */
+    margin: 20px;
+    padding: 20px;
+
+    border-radius: 12px;
+    background-color: #181818;
+    /* background-color: white; */
+}
+
+.card:hover {
+    background-color: #252525;
+    transition: 0.2s;
 }
 
 .cardContainer {
@@ -75,6 +118,16 @@ button:hover {
     flex-wrap: wrap;
 }
 
-/* .cardImage {
-    width: 100%;
-} */
+.card img {
+    /* width: 100%; */
+    box-shadow: 10px 10px 50px black;
+
+}
+
+.artist-image {
+    border-radius: 50%;
+    /* width: 20%; */
+    vertical-align: middle; 
+    width: 100px;
+    height: 100px;
+}
