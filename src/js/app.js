@@ -114,8 +114,14 @@ function listArtists(artists) {
 
     artists.forEach((artist) => {
         const artistButton = document.createElement("button")
-        artistButton.className = "button"
-        artistButton.textContent = artist.name
+        const artistImage = document.createElement("img")
+
+        artistButton.className = "artist-button"
+        // artistButton.textContent = artist.name
+        artistImage.className = "artist-image"
+        artistImage.src = artist.image
+
+        artistButton.appendChild(artistImage)
         buttonMenu.appendChild(artistButton)
 
         artistButton.addEventListener("click", (e) => {
@@ -141,8 +147,11 @@ function listArtists(artists) {
             // const cardTemp = document.querySelector(".cardContainer")
             // cardTemp.remove()
 
-            // const cardContainerOriginal = document.querySelector(".cardContainer")
-            // cardContainerOriginal.remove()
+            const existingCardContainer = document.querySelector(".cardContainer")
+            
+            if (existingCardContainer) {
+                existingCardContainer.remove()
+            }
 
             const cardContainer = document.createElement("div")
             cardContainer.className = "cardContainer"
