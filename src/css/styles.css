@@ -131,3 +131,51 @@ button:hover {
     width: 100px;
     height: 100px;
 }
+
+input, select, textarea, fieldset, button {
+    border-radius: 20px;
+    padding: 10px;
+    /* height: 15px; */
+    background-color: #242424;
+    color: white;
+    border-color: white;
+    /* width: 100%; */
+    /* text-align: center; */
+}
+
+#email {
+    border-radius: 50px;
+    padding: 20px;
+    /* height: 15px; */
+    background-color: #242424;
+    color: white;
+    border-color: white;
+    width: 100%;
+    text-align: center;
+}
+.email-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsletter {
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    font-size: large;
+}
+
+.request-artist {
+    margin: 5px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #121212;
+    width: 100%;
+}
+
+#songs-list {
+    padding: 10px;
+    margin: 10px;
+}
