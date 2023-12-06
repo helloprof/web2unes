@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <script src="https://kit.fontawesome.com/efeb3f9255.js" crossorigin="anonymous"></script>
+    <title>WEB2UNES</title>
+</head>
+
+<body>
+    <nav>
+        <a class="nav-link" style="font-size: 40px;" href="/"><i class="fa-brands fa-spotify"></i>WEB2unes</a>
+        <a class="nav-link" href="/"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;Home</a>
+        <a class="nav-link" href="/"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;&nbsp;Search</a>
+        <a class="nav-link" href="/honesty"><i class="fa-solid fa-heart"></i>&nbsp;&nbsp;&nbsp;Honesty</a>
+        <a class="nav-link" href="/about"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;&nbsp;About</a>
+        <a class="nav-link" href="/new"><i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Add Artist</a>
+
+        <form id="newsletter" action="https://httpbin.org/post" method="post">
+            <label for="email"><i class="fa-solid fa-paper-plane"></i>&nbsp;&nbsp;Join Our Newsletter!</label><br>
+            <div class="email-form">
+
+                <input id="email" type="email" name="email" placeholder="john.smith@youremail.com">
+                <button class="newsletter" type="submit"><i class="fa-solid fa-paper-plane"></i>Send</button>
+            </div>
+
+        </form>
+    </nav>
+    <div class="request-artist">
+        <form id="request" action="https://httpbin.org/post" method="post">
+            <form action="/action_page.php">
+                <fieldset id="fieldset">
+                    <legend>Request New Artist</legend>
+                    <label for="name">Artist Name</label>
+                    <input type="text" id="name" name="name" placeholder="The Weeknd" required><br><br>
+                    <label for="genre">Genre</label>
+                    <select name="genre" id="genre"required><br><br>
+                        <option value="Rap">Rap</option>
+                        <option value="Hip-Hop">Hip-Hop</option>
+                        <option value="R&B">R&amp;B</option>
+                        <option value="Jazz">Jazz</option>
+                    </select>
+                    <input required type="checkbox" id="explicit" name="explicit" value="explicit">
+                    <label for="explicit"> Explicit Lyrics?</label><br><br>
+                    <label for="socials">Socials</label>
+                    <input type="text" id="socials" name="socials" placeholder="instagram, youtube links"><br><br>
+                    <label for="socials">Songs</label>
+                    <div id="songs-list">
+                        <input type="text" id="songs" name="songs" placeholder="Heartless"><button type="button" id="request-song"><i class="fa-solid fa-plus"></i></button><br><br>
+
+                    </div>
+                    <label for="review">Review of Artist</label></p>
+                    <textarea id="review" name="review" rows="4" cols="50">Text here</textarea>
+                    <button class="newsletter" type="submit"><i class="fa-solid fa-paper-plane"></i>Send</button>
+                </fieldset>
+            </form>
+
+        </form>
+    </div>
+
+    <script src="js/form.js"></script>
+
+</body>
+
+</html>
