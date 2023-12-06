@@ -17,11 +17,21 @@
     <a class="nav-link" href="/"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;&nbsp;Search</a>
     <a class="nav-link" href="/honesty"><i class="fa-solid fa-heart"></i>&nbsp;&nbsp;&nbsp;Honesty</a>
     <a class="nav-link" href="/about"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;&nbsp;About</a>
+    <a class="nav-link" href="/new"><i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Add Artist</a>
 
+    <form id="newsletter" action="https://httpbin.org/post" method="post">
+      <label for="email"><i class="fa-solid fa-paper-plane"></i>&nbsp;&nbsp;Join Our Newsletter!</label><br>
+      <div class="email-form">
+
+        <input id="email" type="email" name="email" placeholder="john.smith@youremail.com">
+        <button class="newsletter" type="submit"><i class="fa-solid fa-paper-plane"></i>Send</button>
+      </div>
+
+    </form>
   </nav>
   <div id="menu">
 
-    
+
     <div id="artists">
       <h2 id="selected-artist">
         <!-- Dynamically update the selected category title -->
